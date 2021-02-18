@@ -14,14 +14,19 @@
         #editor{
             font-family: "Courier New", Courier, monospace;
             resize : none;
+            display: block;
+            white-space: pre;
         }
         .pointer{
             cursor: pointer;
         }
+        .overflow-scroll-y{
+            overflow-y: auto;
+        }
     </style>
 </head>
 <body>
-    <div class="container">
+    <div class="container-fluid d-flex flex-column h-100">
         <div class="row mt-1 mb-1">
             <div class="col-8">
                 <button class="btn btn-secondary" onclick="newOne()">重置</button>
@@ -31,19 +36,25 @@
                 <h4>技能ID查詢</h4>
             </div>
         </div>
-        <div class="row">
-            <div class="col-8 overflow-hidden" style='height:600px'>
-                <textarea id='editor' spellcheck="false" class="w-100" style="height:598px;box-sizing: border-box;margin: 0px;"></textarea>
+        <div class="row flex-nowrap flex-grow-1 overflow-hidden">
+            <div class="col-6 col-lg-8 overflow-hidden">
+                <textarea id='editor' spellcheck="false" class="w-100 h-100"></textarea>
             </div>
-            <div class="col-4 overflow-auto" style='height:600px'>
+            <div class="col-6 col-lg-4 d-flex flex-column overflow-hidden">
                 <ul class="nav nav-tabs" id='filterType'>
                     <li class="nav-item">
                         <span class="nav-link active pointer" onclick="showId(this.textContent)">全部</span>
                     </li>
                 </ul>
-                <div id='showId'></div>
+                <div id='showId' class="overflow-scroll-y"></div>
             </div>
         </div>
+        <div class="row">
+            <div class="col text-center" style="color: gray;font-weight: bold;">
+                RO傭兵AI純文字編輯器 v1.0.1
+            </div>
+        </div>
+        
     </div>
 </body>
 </html>
