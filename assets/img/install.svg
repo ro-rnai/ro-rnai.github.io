@@ -1,0 +1,81 @@
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    width="200"
+    height="352"
+    viewBox="-0.5 -0.5 200 352"
+>
+    <defs>
+        <g id="folder" transform="matrix(0.667,0,0,0.667, -16, -16)">
+            <path fill="#FFA000" d="M40,12H22l-4-4H8c-2.2,0-4,1.8-4,4v8h40v-4C44,13.8,42.2,12,40,12z"/>
+            <path fill="#FFCA28" d="M40,12H8c-2.2,0-4,1.8-4,4v20c0,2.2,1.8,4,4,4h32c2.2,0,4-1.8,4-4V16C44,13.8,42.2,12,40,12z"/>
+        </g>
+        <g id="file">
+            <path d="M -9,12 l 18,0 0,-24 -18,0 z M -7,6 l 14,0 m -14,-4 l 14,0 m -14,-4 l 14,0" style="stroke:gray;stroke-width:1px;fill:none;"/>
+        </g>
+        <path id="hSeg" d="M 0,0 l -8,0" style="stroke:gray;stroke-width:1px;fill:none;"/>
+        <g id="frame">
+            <path d="M -10,0 l 20,0 M 0,-10 l0,20" style="stroke:gray;stroke-width:1px;fill:none;"/>
+            <path d="M -30,30 l 60,0 0,-60 -60,0 z" style="stroke:gray;stroke-width:1px;fill:none;"/>
+        </g>
+        <text>文字要 x+50</text>
+    </defs>
+    <rect x="80" y="128" width="112" height="96" style="fill:#ccffcc;stroke:none"/>
+    <g>
+        <use xlink:href="#folder" x="16" y="16"/>
+        <text x="32" y="23" style="font-size: 14px">Gravity</text>
+        <path id="hSeg" d="M 16,32 l 0,16 8,0" style="stroke:gray;stroke-width:1px;fill:none;"/>
+    </g>
+    <g transform="translate(24, 32)">
+        <use xlink:href="#folder" x="16" y="16"/>
+        <text x="32" y="23" style="font-size: 14px">RagnarokOnline</text>
+        <path id="hSeg" d="M 16,32 l 0,16 8,0" style="stroke:gray;stroke-width:1px;fill:none;"/>
+    </g>
+    <g transform="translate(48, 64)">
+        <use xlink:href="#folder" x="16" y="16"/>
+        <text x="32" y="23" style="font-size: 14px">AI</text>
+        <path id="hSeg" d="M 16,32 l 0,240" style="stroke:gray;stroke-width:1px;fill:none;"/>
+    </g>
+    <g transform="translate(72, 96)">
+        <use xlink:href="#hSeg" x="0" y="16"/>
+        <use xlink:href="#folder" x="16" y="16"/>
+        <text x="32" y="23" style="font-size: 14px">USER_AI</text>
+        <path id="hSeg" d="M 16,32 l 0,80" style="stroke:gray;stroke-width:1px;fill:none;"/>
+    </g>
+    <g transform="translate(96, 128)">
+        <use xlink:href="#hSeg" x="0" y="16"/>
+        <use xlink:href="#folder" x="16" y="16"/>
+        <text x="32" y="23" style="font-size: 14px">RNAI</text>
+    </g>
+    <g transform="translate(96, 160)">
+        <use xlink:href="#hSeg" x="0" y="16"/>
+        <use xlink:href="#file" x="16" y="16"/>
+        <text x="32" y="23" style="font-size: 14px">AI.lua</text>
+    </g>
+    <g transform="translate(96, 192)">
+        <use xlink:href="#hSeg" x="0" y="16"/>
+        <use xlink:href="#file" x="16" y="16"/>
+        <text x="32" y="23" style="font-size: 14px">AI_M.lua</text>
+    </g>
+    <g transform="translate(72, 224)">
+        <use xlink:href="#hSeg" x="0" y="16"/>
+        <use xlink:href="#file" x="16" y="16"/>
+        <text x="32" y="23" style="font-size: 14px">AI.lua</text>
+    </g>
+    <g transform="translate(72, 256)">
+        <use xlink:href="#hSeg" x="0" y="16"/>
+        <use xlink:href="#file" x="16" y="16"/>
+        <text x="32" y="23" style="font-size: 14px">AI_M.lua</text>
+    </g>
+    <g transform="translate(72, 288)">
+        <use xlink:href="#hSeg" x="0" y="16"/>
+        <use xlink:href="#file" x="16" y="16"/>
+        <text x="32" y="23" style="font-size: 14px">Const.lua</text>
+    </g>
+    <g transform="translate(72, 320)">
+        <use xlink:href="#hSeg" x="0" y="16"/>
+        <use xlink:href="#file" x="16" y="16"/>
+        <text x="32" y="23" style="font-size: 14px">Util.lua</text>
+    </g>
+    
+</svg>
