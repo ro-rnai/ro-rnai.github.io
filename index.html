@@ -54,12 +54,14 @@
 <li>跟隨主人的方式不會亂飄，所以趕路時比較不會跟不上</li>
 <li>相較於官方 AI 較不會跑出螢幕範圍</li>
 </ul>
-<p><span style="color:red;font-weight:bold">[注意]目前自動技能設定不適用「對地使用技能，如地雷陷阱」以及「以自己為中心傷害技能，如怒暴」。</span></p>
+<p><span style="color:red;font-weight:bold">[注意] 1.0.2 版(含)以前，自動技能設定不適用「對地使用技能，如地雷陷阱」以及「以自己為中心傷害技能，如怒暴」。</span></p>
 <h2>更新紀錄</h2>
 <ul>
-<li><a href="https://github.com/ro-rnai/RNAI/archive/v1.0.3.zip">RNAI-1.0.3</a> <span style="color:gray;font-size:0.8em">(2021.07.11)</span>
+<li><a href="https://github.com/ro-rnai/RNAI/archive/v1.1.0.zip">RNAI-1.1.0</a> <span style="color:gray;font-size:0.8em">(2022.02.11)</span>
 <ul>
-<li>[修正] 無怪物且技能對象為主人時，修正技能使用頻率忽略設定的問題。</li>
+<li>[新增] 不同生命體/傭兵可以使用獨立的設定檔</li>
+<li>[修正] 自動技能設定可以設定對地面以及以自身為中心的傷害技能了</li>
+<li>[變更] 當命令生命體/傭兵攻擊目標時，不再單純使用普通攻擊，而是會套用技能設定</li>
 </ul></li>
 <li><a href="https://github.com/ro-rnai/RNAI/archive/v1.0.2.zip">RNAI-1.0.2</a> <span style="color:gray;font-size:0.8em">(2021.02.19)</span>
 <ul>
@@ -77,7 +79,11 @@
 </ul></div>
 			<div id='tabpanel-install' class="tabpanel tabpanel-hide"><h2>安裝下載</h2>
 <ol>
-<li>下載檔案：<a href="https://github.com/ro-rnai/RNAI/archive/v1.0.3.zip">RNAI-1.0.3</a></li>
+<li>下載檔案：
+<ul>
+<li><a href="https://github.com/ro-rnai/RNAI/archive/v1.1.0.zip">RNAI-1.1.0</a> 最新版</li>
+<li><a href="https://github.com/ro-rnai/RNAI/archive/v1.0.2.zip">RNAI-1.0.2</a> 穩定的舊版</li>
+</ul></li>
 <li>將檔案解壓縮到 <code>RO資料夾\AI\USER_AI\</code>，若沒有 URER_AI 資料夾可以自行建立。<br>（參考下圖，綠底為下載解壓縮的檔案）<br><img src="assets/img/install.svg" alt="img" /></li>
 <li>在遊戲中輸入 <code>/hoai</code> （生命體）或 <code>/merai</code> （傭兵），可以切換使用官方或是使用者自訂的 AI。</li>
 <li>重新召喚、過地圖、瞬間移動（含翅膀）或重登即生效。</li>
@@ -164,6 +170,7 @@
 <tr>
 <th>類型</th>
 <th>設定檔</th>
+<th>備註</th>
 </tr>
 </thead>
 <tbody>
@@ -181,15 +188,20 @@
 </tr>
 <tr>
 <td>商城傭兵</td>
-<td>無</td>
+<td>wander_man.lua =&gt; 邪骸浪人<br>wicked_nymph.lua =&gt; 妖仙女<br>kasa_tiger.lua =&gt; 火鳥/虎王(共用)<br>salamander.lua =&gt; 火蜥蜴<br>teddy_bear.lua =&gt; 玩偶熊<br>mimic.lua =&gt; 邪惡箱<br>disguise.lua =&gt; 假面鬼<br>alice.lua =&gt; 愛麗絲女僕</td>
+<td>1.1.0版開始才支援</td>
 </tr>
 <tr>
 <td>生命體</td>
-<td>無</td>
+<td>lif.lua 麗芙<br>amistr.lua 艾咪斯可魯<br>filir.lua 飛里樂<br>vanilmirth.lua 巴尼米樂斯<br>eira.lua 艾蘿<br>bayeri.lua 巴耶黎<br>sera.lua 賽拉<br>dieter.lua 迪爾特<br>eleanor.lua 伊琳諾雅</td>
+<td>1.1.0版開始才支援</td>
 </tr>
 </tbody>
 </table>
-<p>PS. 上面的 <code>xx</code> 是傭兵等級(01~10)，例如「1 等弓傭兵」的個別設定檔為 <code>arc01.lua</code></p>
+<ul>
+<li>上面的 <code>xx</code> 是傭兵等級(01~10)，例如「1 等弓傭兵」的個別設定檔為 <code>arc01.lua</code></li>
+<li>1.1.0版(含)之後，個別設定檔請放在 RNAI\custom 資料夾內；1.0.2 版(含)以前，個別設定檔請放在 RNAI 資料夾。</li>
+</ul>
 <h3>參數說明</h3>
 <pre><code>FollowDis=2 --跟隨距離
 MoveDelay=500 --兩次發送移動的延遲 500 ms，建議不要動他。
